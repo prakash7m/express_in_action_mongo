@@ -1,0 +1,31 @@
+{
+    "name": "express_in_action_mongo",
+    "version": "1.0.0",
+    "description": "Simple learning app for express and mongoDB",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://prakash7m@github.com/prakash7m/express_in_action_mongo.git"
+    },
+    "author": "Prakash Paudel",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/prakash7m/express_in_action_mongo/issues"
+    },
+    "homepage": "https://github.com/prakash7m/express_in_action_mongo#readme",
+    "dependencies": {
+        "bcrypt-nodejs": "0.0.3",
+        "body-parser": "^1.6.5",
+        "connect-flash": "^0.1.1",
+        "cookie-parser": "^1.3.2",
+        Listing8.1package.jsonforLAMLicensedto<miler.888@gmail.com>www.it-ebooks.infoTalkingtoMongofromNodewithMongoose125"ejs": "^1.0.0",
+        "express": "^5.0.0",
+        "express-session": "^1.7.6",
+        "mongoose": "^3.8.15",
+        "passport": "^0.2.0",
+        "passport-local": "^1.0.0"
+    }
+}
