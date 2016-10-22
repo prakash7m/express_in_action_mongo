@@ -1,0 +1,18 @@
+<% include _header %>
+<h1>Welcome to Learn Express with MongoDB!</h1>
+<div class="navbar">
+    <a type="button" class="btn btn-default" href="/users/edit">Add User</a>
+</div>
+<% users.forEach(function(user) { %>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="/users/<%= user.username %>">
+            <%= user.name() %>
+        </a> 
+    </div>
+    <% if (user.getBio()) { %>
+    <div class="panel-body"><%= user.getBio() %></div>
+    <% } %> 
+</div>
+<% }) %>
+<% include _footer %>

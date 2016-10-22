@@ -1,0 +1,25 @@
+<% include _header %>
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Login
+            </div>
+            <div class="panel-body">
+                <form action="/login" method="post">
+                    <div class="form-group">
+                        <lable for="usrname">Username</label>
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Username"/>
+                    </div>
+                    <div class="form-group">
+                        <lable for="password">Password</label>
+                        <input type="password"  class="form-control" name="password" id="password" placeholder="Password"/>
+                    </div>
+                    <button class="btn btn-primary pull-right">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include _footer %>

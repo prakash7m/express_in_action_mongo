@@ -1,0 +1,22 @@
+<% include _header %>
+<% if ((currentUser) && (currentUser.id === user.id)) { %>
+  <a href="/edit" class="pull-right">Edit your profile</a>
+<% } %>
+<div class="panel panel-primary">
+<div class="panel-heading"><h1><%= user.name() %></h1></div>
+<div class="panel-body">
+<h2>Joined on <%= user.createdAt %></h2>
+<h3>Username: <%= user.username %></h3>
+<% if (user.getBio()) { %>
+  <p><%= user.getBio() %></p>
+<% } %>
+</div>
+</div>
+
+<div class="pull-right">
+<a class="btn btn-danger" href="/users/delete/<%= user.username %>">Delete</a>
+
+<a class="btn btn-primary" href="/users/edit/<%= user.username %>">Edit Profile</a>
+</div>
+
+<% include _footer %>

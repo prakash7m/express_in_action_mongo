@@ -1,0 +1,37 @@
+<% include _header %>
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <% if (user._id) {%> Edit user <% } else { %>Create new user<% } %> 
+            </div>
+            <div class="panel-body">
+                <form action="/users/edit" method="post" class="form">
+                    <input type="text" hidden="true" name="id" value="<%= user._id %>">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" <% if (user._id) {%> disabled="disabled" <% } %> name="username" id="username" placeholder="Username" value="<%= user.username %>">
+                    </div>
+                    <% if (!user._id) {%> 
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="text" class="form-control" name="password" id="password" placeholder="Password" value="<%= user.password %>">
+                    </div>
+                    <% } %>
+                    <div class="form-group">
+                        <label for="displayname">Display Name</label>
+                        <input type="text" class="form-control" name="displayName" id="displayname" placeholder="Display Name" value="<%= user.displayName %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="bio">Bio</label>
+                        <textarea class="form-control" id="bio" name="bio" placeholder="Bio"><%= user.bio %></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<% include _footer %>
