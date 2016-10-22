@@ -4,7 +4,7 @@
   "description": "Simple learning app for express and mongoDB",
   "main": "app.js",
   "scripts": {
-    "start": "node app"
+    "start": "/Users/immune/.npm-packages/bin/nodemon app.js"
   },
   "repository": {
     "type": "git",
