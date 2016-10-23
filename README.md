@@ -21,3 +21,6 @@ The purpose of this app to learn using mongoDB together with express. Learnt the
 - Login page, which includes local login and facebook login option
 - Signup for local login (only username and password is asked)
 - logout
+
+## Unit testing: Testing Express Applications: Chapter 9
+- Added test sample using Mocha and Chai
