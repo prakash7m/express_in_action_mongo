@@ -3,6 +3,8 @@ Simple learning app for express and mongoDB
 
 The purpose of this app to learn using mongoDB together with express. Learnt the passport authentication module to authenticate user. All the URL starting with /users require authentication. /login, /signup are only public URL.
 
+> Followed the book Express in action: https://www.manning.com/books/express-in-action
+
 ## In this App, I have used
 - mongoose to access mongoDB
 - express router to setup routes
