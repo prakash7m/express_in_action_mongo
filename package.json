@@ -4,7 +4,7 @@
   "description": "Simple learning app for express and mongoDB",
   "main": "app.js",
   "scripts": {
-    "start": "/Users/immune/.npm-packages/bin/nodemon app.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "express-session": "^1.14.1",
     "mongoose": "^4.6.4",
     "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
     "passport-local": "^1.0.0"
   }
 }

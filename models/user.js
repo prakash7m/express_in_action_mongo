@@ -16,7 +16,8 @@ var userSchema = mongoose.Schema({
         default: Date.now
     },
     displayName: String,
-    bio: String
+    bio: String,
+    facebook: Object
 });
 
 userSchema.methods.name = function () {
