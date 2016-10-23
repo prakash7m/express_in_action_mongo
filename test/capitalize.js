@@ -16,4 +16,9 @@ describe("capitalize", function () {
         expect(capitalize("this is test sentence")).to.equal("This is test sentence");
         expect(capitalize("hello world")).to.equal("Hello world")
     });
+
+    it("Leaves the empty string as is", function () {
+        expect(capitalize("")).to.equal("");
+        expect(capitalize()).to.equal("");
+    })
 });
