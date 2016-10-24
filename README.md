@@ -25,7 +25,7 @@ The purpose of this app to learn using mongoDB together with express. Learnt the
 ## Unit/Integration testing: Testing Express Applications: Chapter 9
 - Added test sample using Mocha and Chai
 - Added sample integration testing using supertest
-> ```
+```
   capitalize
     √ Capitalizes words
     √ Capitalizes a sentence
@@ -39,7 +39,7 @@ The purpose of this app to learn using mongoDB together with express. Learnt the
   5 passing (347ms)
 ```
 - Used cheerio (Similar to JQuery for Node to traverse dom)
-> ```
+```
   capitalize
     √ Capitalizes words
     √ Capitalizes a sentence
