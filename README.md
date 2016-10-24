@@ -27,7 +27,6 @@ The purpose of this app to learn using mongoDB together with express. Learnt the
 - Added sample integration testing using supertest
 
 > ```
-### Sample output
   capitalize
     √ Capitalizes words
     √ Capitalizes a sentence
