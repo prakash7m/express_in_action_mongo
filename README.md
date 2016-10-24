@@ -22,5 +22,39 @@ The purpose of this app to learn using mongoDB together with express. Learnt the
 - Signup for local login (only username and password is asked)
 - logout
 
-## Unit testing: Testing Express Applications: Chapter 9
+## Unit/Integration testing: Testing Express Applications: Chapter 9
 - Added test sample using Mocha and Chai
+- Added sample integration testing using supertest
+
+> ```
+### Sample output
+  capitalize
+    √ Capitalizes words
+    √ Capitalizes a sentence
+    √ Leaves the empty string as is
+
+  plain text response
+    √ returns a plain text response (136ms)
+    √ returns your User Agent
+
+
+  5 passing (347ms)
+```
+- Used cheerio (Similar to JQuery for Node to traverse dom)
+> ```
+  capitalize
+    √ Capitalizes words
+    √ Capitalizes a sentence
+    √ Leaves the empty string as is
+
+  plain text response
+    √ returns a plain text response (155ms)
+    √ returns your User Agent (40ms)
+
+  html response
+    √ returns an HTML response (48ms)
+    √ returns your User Agent (64ms)
+
+
+  7 passing (493ms)
+```

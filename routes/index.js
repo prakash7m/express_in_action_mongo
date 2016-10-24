@@ -16,6 +16,7 @@ router.use(function(req, res, next) {
   next();
 });
 
+
 router.use("/users", setupPassport.ensureAuthentication, user);
 router.use("/auth", auth);
 
@@ -55,6 +56,15 @@ router.post("/signup", function (req, res, next) {
     failureRedirect: "/login",
     failureFlash: true
 }))
-
-
+router.get("/", function (req, res, next) {
+    res.render("home");
+});
+router.get("/supertest", function(req, res) {
+    if (req.accepts("html")) {
+        res.render("supertest", {userAgent: req.headers["user-agent"]});
+    } else {
+        res.type("text");
+        res.send(req.headers["user-agent"]);
+    }
+});
 module.exports = router;

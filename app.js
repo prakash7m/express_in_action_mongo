@@ -32,9 +32,11 @@ app.use(passport.session());
 
 app.use(routes);
 
+if(!module.parent){ 
+    app.listen(app.get("port"), function () {
+        console.log("Server running at " + app.get("port"));
+    }); 
+}
 
-app.listen(app.get("port"), function () {
-    console.log("Server running at " + app.get("port"));
-});
 
-
+module.exports = app;
