@@ -7,6 +7,7 @@
             </div>
             <div class="panel-body">
                 <form action="/users/edit" method="post" class="form">
+                    <% include _csrf %>
                     <input type="text" hidden="true" name="id" value="<%= user._id %>">
                     <div class="form-group">
                         <label for="username">Username</label>

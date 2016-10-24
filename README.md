@@ -56,3 +56,13 @@ The purpose of this app to learn using mongoDB together with express. Learnt the
 
   7 passing (493ms)
 ```
+
+## Implementing Security to Application: Chapter 10
+- Learnt to use https with express and using HSTS
+- Used csrf prevention using csurf module
+- Used few basic safeguards using helmet
+```
+app.use(helmet.frameguard("sameorigin")); // using same origin policy
+app.use(helmet.noSniff()); // Don't let browsers infer the file type
+app.use(helmet.xssFilter()); // Against the cross site scripting attack. It does not complety prevents from the attack but provides some safeguards.
+```

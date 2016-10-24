@@ -15,14 +15,14 @@ router.get("/", function (req, res, next) {
 
 
 router.get("/edit", function (req, res, next) {
-    res.render("edit", {user: {}});
+    res.render("edit", {user: {}, csrfToken: req.csrfToken()});
 });
 
 router.get("/edit/:username", function (req, res, next) {
     User.findOne({username: req.params.username}).exec(function (err, user) {
         if (user) {
             console.log(user)
-            res.render("edit", {user: user})
+            res.render("edit", {user: user, csrfToken: req.csrfToken()})
         } else {
             req.flash("error", "User does not exists");
             res.redirect("/users/edit")
@@ -73,7 +73,7 @@ router.get("/:username", function (req, res, next) {
     User.findOne({username: req.params.username}).exec(function (err, user) {
         if (err) { return next(err); }
         if (!user) { return next(404); }
-        res.render("profile", {user: user})
+        res.render("profile", {user: user, csrfToken: req.csrfToken()})
     });
 });
 

@@ -21,7 +21,9 @@ router.use("/users", setupPassport.ensureAuthentication, user);
 router.use("/auth", auth);
 
 router.get("/login", function (req, res, next) {
-    res.render("login");
+    res.render("login", {
+        csrfToken: req.csrfToken()
+    });
 });
 router.post("/login", passport.authenticate("login", {
     successRedirect: "/users",
@@ -34,7 +36,9 @@ router.get("/logout", function (req, res, next) {
     res.redirect("/login")
 });
 router.get("/signup", function (req, res, next) {
-    res.render("signup")
+    res.render("signup", {
+        csrfToken: req.csrfToken()
+    })
 });
 router.post("/signup", function (req, res, next) {
     var username = req.body.username,
@@ -67,4 +71,5 @@ router.get("/supertest", function(req, res) {
         res.send(req.headers["user-agent"]);
     }
 });
+
 module.exports = router;
